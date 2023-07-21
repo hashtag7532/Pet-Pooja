@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import Sidebar from './components/Sidebar'
+import Home from './pages/Home'
+
 
 function App() {
   return (
-    <div></div>
-  );
+    <div>
+      <Home />
+    </div>
+  )
 }
 
-export default App;
+export default App
