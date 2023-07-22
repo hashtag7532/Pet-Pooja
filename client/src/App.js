@@ -1,13 +1,24 @@
 import React from 'react'
 import Sidebar from './components/Sidebar'
 import Home from './pages/Home'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Analytics from './pages/Analytics'
+import Orders from './pages/Orders'
+import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Route, BrowserRouter, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+    <section className='flex gap-6'>
+        <Sidebar />
+        <Navbar />
+      </section>
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/orders' exact element={<Orders />} />
+        <Route path='/analytics' exact element={<Analytics />} />
+      </Routes>
+    </>
   )
 }
 
