@@ -12,12 +12,12 @@ import {Link} from "react-router-dom"
 function Sidebar() {
   const menus = [
     {name : 'Dashboard', link : '/', icon : MdOutlineDashboard},
-    {name : 'Orders and Billing', link : '/', icon : RiBillLine, margin:true},
-    {name : 'Tables', link : '/', icon : MdTableBar, margin:true},    
-    {name : 'Inventory', link : '/', icon : MdOutlineInventory2},    
-    {name : 'Analytics', link : '/', icon : TbReportAnalytics},
-    {name : 'User', link : '/', icon : AiOutlineUser},
-    {name : 'Help Manual', link : '/', icon : BiHelpCircle},
+    {name : 'Orders and Billing', link : '/orders', icon : RiBillLine, margin:true},
+    {name : 'Tables', link : '/tables', icon : MdTableBar, margin:true},    
+    {name : 'Inventory', link : '/inventory', icon : MdOutlineInventory2},    
+    {name : 'Analytics', link : '/analytics', icon : TbReportAnalytics},
+    {name : 'User', link : '/user', icon : AiOutlineUser},
+    {name : 'Help Manual', link : '/help', icon : BiHelpCircle},
   ]
 
   const [open, setOpen] = useState(true);
