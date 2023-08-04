@@ -13,6 +13,7 @@ body {
     font-family : "Montserrat", sans-serif;
     /* font-family : "Permanent Marker", cursive; */
 }
-.justify{
-    justify-items : space-between;
+
+.active{
+    background-color : #888888;
 }

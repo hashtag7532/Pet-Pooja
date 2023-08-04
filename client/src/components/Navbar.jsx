@@ -4,7 +4,7 @@ import { IoMdNotifications, IoMdSettings } from 'react-icons/io'
 
 function Navbar() {
   return (
-    <div className='flex py-3 justify-between w-full'>
+    <div className='flex py-3 justify-between w-full h-12 '>
       <div className='text-xl font-bold'>
         <Link to={"/"}>PetPooja</Link>
       </div>

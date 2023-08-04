@@ -11,7 +11,10 @@ function App() {
     <>
     <section className='flex gap-6'>
         <Sidebar />
-        <Navbar />
+        <div className='flex flex-col w-full'>
+          <Navbar />
+          <Home />
+        </div>
       </section>
       <Routes>
         <Route path='/' exact element={<Home />} />

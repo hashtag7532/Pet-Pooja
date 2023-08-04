@@ -11,16 +11,18 @@ import {Link} from "react-router-dom"
 
 function Sidebar() {
   const menus = [
-    {name : 'Dashboard', link : '/', icon : MdOutlineDashboard},
-    {name : 'Orders and Billing', link : '/orders', icon : RiBillLine, margin:true},
-    {name : 'Tables', link : '/tables', icon : MdTableBar, margin:true},    
-    {name : 'Inventory', link : '/inventory', icon : MdOutlineInventory2},    
-    {name : 'Analytics', link : '/analytics', icon : TbReportAnalytics},
-    {name : 'User', link : '/user', icon : AiOutlineUser},
-    {name : 'Help Manual', link : '/help', icon : BiHelpCircle},
+    {name : 'Dashboard', link : '/', icon : MdOutlineDashboard, margin:true, key : 1},
+    {name : 'Orders and Billing', link : '/orders', icon : RiBillLine, margin:true, key : 2},
+    {name : 'Tables', link : '/tables', icon : MdTableBar, margin:true, key : 3},    
+    {name : 'Inventory', link : '/inventory', icon : MdOutlineInventory2, margin:true, key : 4},    
+    {name : 'Analytics', link : '/analytics', icon : TbReportAnalytics, margin:true, key : 5},
+    {name : 'User', link : '/user', icon : AiOutlineUser, margin:true, key : 6},
+    {name : 'Help Manual', link : '/help', icon : BiHelpCircle, margin:true, key : 7},
   ]
 
   const [open, setOpen] = useState(true);
+  const [currentLink, setCurrentLink] = useState(7);
+  
   return (
     <div className={`min-h-screen px-4 duration-500 ${open ? "w-72" : "w-16"} bg-slate-100`}>
       <div className='py-3 flex justify-end'>
@@ -36,8 +38,9 @@ function Sidebar() {
             to={menu?.link} 
             key={i} 
             className={`${
-              menu?.margin && "mt-5"
+              menu?.margin && "mt-5" && currentLink == i ? "active" : ""
             } group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-200 rounded-md`}
+            onClick={() => setCurrentLink(i)}
           >
               <div>{React.createElement(menu?.icon,{size:'20'})}</div>
               <h2 
